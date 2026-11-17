@@ -17,7 +17,7 @@
 \title{IntentGuard-eBPF: Dynamic, Microsecond-Level Runtime Containment for Autonomous LLM Agents}
 
 \author{
-\IEEEauthorblockN{Harikrishna D.}
+\IEEEauthorblockN{Anonymous Author}
 }
 
 \maketitle
@@ -151,8 +151,6 @@ Generic eBPF (Tetragon) & Reported externally & Reported externally & Static Pod
 IntentGuard-eBPF addresses the semantic gap in autonomous AI agent containment by coupling application-level intent with kernel-level eBPF enforcement. By leveraging BPF CO-RE and a low-latency IPC daemon, IntentGuard dynamically locks down network access and subprocess execution for the current process, with an observed active-configuration \texttt{connect()} duration of $8.89\,\mu\text{s}$ and a daemon RSS mean of $14.24\,\text{MB}$. Controlled baseline comparisons, broader syscall coverage, and child-process policy inheritance remain important future work.
 
 Future work includes extending eBPF tracepoint hooks to LSM security modules (\texttt{bpf\_lsm}) for fine-grained file path matching, as well as developing native plugins for major agentic frameworks including LangGraph, CrewAI, and AutoGen.
-
-\section*{Acknowledgment}
 
 \begin{thebibliography}{00}
 \bibitem{bpf2go} Cilium eBPF Library for Go, \url{https://github.com/cilium/ebpf}, 2026.
