@@ -1,0 +1,15 @@
+[Unit]
+Description=IntentGuard eBPF runtime containment daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/intentguardd
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=false
+CapabilityBoundingSet=CAP_BPF CAP_PERFMON CAP_SYS_ADMIN
+AmbientCapabilities=CAP_BPF CAP_PERFMON CAP_SYS_ADMIN
+
+[Install]
+WantedBy=multi-user.target
